@@ -3,7 +3,7 @@ import tkinter as tk
 def check_password_strength(password):
     score = 0
     feedback = []
-    total_possible = 5  # Total points based on 5 criteria
+    total_possible = 5  # Total points possible
 
     # List of common passwords
     common_passwords = {
@@ -13,31 +13,31 @@ def check_password_strength(password):
         "princess"
     }
 
-    # Criterion 1: Length check
+    # Criteria 1: Length
     if len(password) >= 8:
         score += 1
     else:
         feedback.append("Increase password length to at least 8 characters.")
 
-    # Criterion 2: Lowercase letters check
+    # Criteria 2: Lowercase letters 
     if any(c.islower() for c in password):
         score += 1
     else:
         feedback.append("Add lowercase letters.")
 
-    # Criterion 3: Uppercase letters check
+    # Criteria 3: Uppercase letters
     if any(c.isupper() for c in password):
         score += 1
     else:
         feedback.append("Add uppercase letters.")
 
-    # Criterion 4: Digit check
+    # Criteria 4: Digits
     if any(c.isdigit() for c in password):
         score += 1
     else:
         feedback.append("Include at least one digit.")
 
-    # Criterion 5: Special characters check
+    # Criteria 5: Special characters
     if any(c in "!@#$%^&*()" for c in password):
         score += 1
     else:
@@ -97,11 +97,11 @@ def evaluate_password():
 root = tk.Tk()
 root.title("Password Strength Checker")
 
-# Create UI elements
+# Create UI
 instruction_label = tk.Label(root, text="Enter your password:")
 instruction_label.pack(pady=5)
 
-# Entry widget with plaintext display
+# Display widget with plaintext display
 entry = tk.Entry(root, width=40)
 entry.pack(pady=5)
 
