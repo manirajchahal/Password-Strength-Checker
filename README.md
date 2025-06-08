@@ -11,7 +11,8 @@ This project is a Python-based password strength checker with a graphical user i
 ## How to Run
 
 1. Ensure you have Python installed.
-2. Run the script:
+2. Clone the repo.
+3. Run the script:
 
    ```bash
    python password_checker_gui.py
